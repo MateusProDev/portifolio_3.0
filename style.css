@@ -1,0 +1,225 @@
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+/* inicio do modelo responsivo do menu*/
+
+.menu{
+    background-image: linear-gradient(to bottom, #1693e6, #290707);
+    background-color: #d59bf0;
+    color: white;
+    padding: 15px;
+    margin-top: -9px;
+    margin-bottom: -15px;
+}
+
+.menu nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    display: flex;
+}
+
+#logo{
+    margin-top: 5px;
+    margin-left: -30px;
+}
+#nomes{
+    margin-top: 12px;
+}
+
+.menu a {
+    font-size: 14px;
+    color: #dadada;
+    text-decoration: 
+    none;
+}
+
+.menu a:hover { 
+    background-color: rgba(2, 94, 131, 0.5);
+    color: #ffffff;
+}
+
+.menu img{
+    width: 25px;
+}
+
+/* final  do modelo responsivo do menu*/
+
+/* INICIO DO CORPO */
+
+.banner img {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+h1{
+    font-size: 18px;
+}
+
+.conteudo{
+    margin-bottom: 50px;
+}
+.exemplos {
+    display: flex;
+    overflow: scroll;
+}
+
+.projetos{
+    background-color: #e3e3e3;
+    margin: 0;
+    padding: 20px;
+}
+.card {
+    width: 270px;
+    margin: 1em;
+    border: 1px solid #ccc;
+    box-shadow: 8px 8px 3px #ccc;
+    
+}
+
+.card img {
+    width: 220px;
+    object-fit: cover;
+}
+
+.cardsobre {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logossobre{
+    width: 50px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 8px 8px 3px #ccc;
+}
+
+.logossobre img{
+    width: 50px;
+    object-fit: cover;
+}
+
+.containerHover{
+    display: flex;
+    overflow: scroll;
+    margin: 20px 10px 20px 10px;
+    gap: 5px;
+}
+
+.item{
+    height: 700px;
+    background-color: lightgray;
+    transition: 0.35s;
+    opacity: 0.1;
+    cursor: pointer;
+    text-align: center;
+}
+
+.item h2{
+    font-size: 16px;
+}
+.item h2, p{
+    padding: 7px;
+}
+
+.item img{
+    width: 220px;
+}
+
+.btn{
+    text-align: center;
+}
+
+.btn button{
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.item button{
+    width: 70%;
+    border: none;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.255);
+}
+
+.item:hover {
+    opacity: 1;
+}
+
+.item:not(:hover){
+    opacity: 0.3;
+    transform: scale(0.9);
+}
+
+/* FIM DO CORPO*/
+
+/* INICIO DO RODAPÉ DO SITE*/
+
+
+.git p {
+    font-size: 12px;
+}
+
+.giticon ul  {
+    color: #fff;
+    display: flex;
+    margin-left: -78px;
+}
+
+.giticon li {
+    display: flex;
+    margin: 0 10px 0 0;
+}
+
+.giticon img {
+    width: 20px;
+}
+
+hr {
+    border-color: rgb(185, 219, 241);
+}
+
+section {
+    margin: 20px;
+}
+
+address {
+    font-size: 12px;
+}
+address a{
+    text-decoration: none;
+    color: #5f5f5f;
+}
+
+section h2 {
+    font-size: 12px;
+}
+
+
+.linhabottom {
+    width: 145px;
+    border-color: #ffffff;
+    margin-left: 20px;
+}
+
+footer {
+    background-color: rgb(41, 98, 151);
+    margin: 0px 0;
+    padding: 10px 0px 10px 0px;
+    color: #ffffff;
+    font-size: 10px;
+    text-align: center;
+}
+
+footer a {
+    color: rgb(215, 215, 215);
+    text-decoration: none;
+}
+
+/* FIM DO RODAPÉ DO SITE*/
