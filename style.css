@@ -322,7 +322,29 @@ h1{
 
 /* INICIO DO RODAPÉ DO SITE*/
 
+.imgFloat{
+  padding: 30px 0 0px 20px;
+}
 
+.imgFloat img{
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(0px);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 .git p {
     font-size: 12px;
 }
@@ -370,7 +392,7 @@ section h2 {
 }
 
 footer {
-    background-color: rgb(41, 98, 151);
+    background-color: #333;
     margin: 0px 0;
     padding: 10px 0px 10px 0px;
     color: #ffffff;
