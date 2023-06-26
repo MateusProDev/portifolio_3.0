@@ -2,52 +2,94 @@ body {
     background-color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
-    flex-wrap: wrap;
 }
 
 /* inicio do modelo responsivo do menu*/
 
-.menu{
-    background-image: linear-gradient(to bottom, #1693e6, #290707);
-    background-color: #d59bf0;
-    color: white;
-    padding: 15px;
-    margin-top: -9px;
-    margin-bottom: -15px;
-}
-
-.menu nav ul {
+header {
+    background-color: #333;
+    height: 80px;
     display: flex;
-    justify-content: space-around;
-}
-
-.menu li {
-    display: flex;
-}
-
-#logo{
-    margin-top: 5px;
-    margin-left: -30px;
-}
-#nomes{
-    margin-top: 12px;
-}
-
-.menu a {
-    font-size: 14px;
-    color: #dadada;
-    text-decoration: 
-    none;
-}
-
-.menu a:hover { 
-    background-color: rgba(2, 94, 131, 0.5);
-    color: #ffffff;
-}
-
-.menu img{
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.281);
+  }
+  
+  .logo img {
+    width: 150px;
+    margin-left: -20px;
+  }
+  
+  .containerNav {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .containerNav .line {
     width: 25px;
-}
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+    
+  .nav-links a:hover {
+    color: darkgoldenrod;;
+  }
+    
+  @media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .containerNav {
+    display: block;
+  }
+  
+  .containerNav.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .containerNav.active .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .containerNav.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -8px);
+  }
+  
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 20px;
+  }
+  
+  .nav-links.active li {
+    margin-bottom: 10px;
+  }
+  }
 
 /* final  do modelo responsivo do menu*/
 
@@ -61,11 +103,21 @@ body {
 
 h1{
     font-size: 18px;
+    margin-left: 5px;
 }
 
 .conteudo{
-    margin-bottom: 50px;
+    margin: 0;
 }
+
+.conteudo h1, p{
+    text-align: justify;
+}
+
+.sobre{
+    margin: 0 30px 30px 20px;
+}
+
 .exemplos {
     display: flex;
     overflow: scroll;
@@ -89,27 +141,136 @@ h1{
     object-fit: cover;
 }
 
-.cardsobre {
+.containerBanner {
+    display: flex;
+    overflow: scroll;
+}
+
+.containerBanner img{
+    width: 200px;
+    border: 1px solid #ccc;
+    box-shadow: 8px 8px 3px #ccc;
+    margin: 10px 0px 10px 10px;
+}
+
+.logossobre img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.containerCliqueInterativo{
+    width: 100%;
+    height: 100px;
     display: flex;
     justify-content: space-evenly;
 }
 
-.logossobre{
-    width: 50px;
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 8px 8px 3px #ccc;
-}
+.cliqueBox {
+    background-color: #ccc;
+    animation: expandBox 5s infinite;
+  }
 
-.logossobre img{
-    width: 50px;
-    object-fit: cover;
-}
+  .boxUm {
+    background-color:  #9db068;
+    position: relative;
+    animation: boxUmExpand 10s infinite;
+  }
 
+  @keyframes boxUmExpand {
+    0% {
+        width: 0px;
+        height: 50px;
+    }
+
+    50% {
+      width: 650px;
+      height: 50px;
+      border-radius: 50px;
+      transform: translate(155%, 90%);
+    }
+
+    100% {
+        width: 0px;
+        height: 50px;
+
+    }
+  }
+
+  .boxDois {
+    background-color: #418097;
+    animation: boxDoisExpand 10s infinite;
+  }
+
+  @keyframes boxDoisExpand {
+    0% {
+        width: 0px;
+        height: 50px;
+    }
+
+    50% {
+        width: 650px;
+        height: 50px;
+        border-radius: 50px;
+        transform: translate(-10%, 70%);
+    }
+    100% {
+        width: 0px;
+        height: 50px;
+    }
+  }
+
+  .boxTres {
+    background-color: #555555;
+    animation: boxTresExpand 10s infinite;
+  }
+
+  @keyframes boxTresExpand {
+    0% {
+        width: 0px;
+        height: 50px;
+    }
+
+    50% {
+      width: 800px;
+      height: 50px;
+      border-radius: 50px;
+      transform: translate(-100px, 40px);
+    }
+
+    100% {
+        width: 0px;
+        height: 50px;
+    }
+  }
+
+  .cliqueBox P{
+    animation: P 10s infinite;
+  }
+
+  @keyframes P {
+    0% {
+        font-size: 0px;
+        text-align: center;
+        color: #5555;
+    }
+
+    50% {
+        text-align: center;
+        font-size: 11px;
+        color: #fff;
+        text-shadow: 4px 4px 4px #333;
+    }
+
+    100% {
+        font-size: 0px;
+        text-align: center;
+        color: #5555;
+    }
+}
 .containerHover{
     display: flex;
     overflow: scroll;
-    margin: 20px 10px 20px 10px;
+    margin: 0px 10px 20px 0;
     gap: 5px;
 }
 
