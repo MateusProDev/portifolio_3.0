@@ -2,6 +2,7 @@ body {
     background-color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* inicio do modelo responsivo do menu*/
@@ -154,7 +155,7 @@ h1{
 }
 
 .logossobre img{
-    width: 100%;
+    width: 100;
     object-fit: cover;
 }
 
@@ -318,6 +319,85 @@ h1{
     transform: scale(0.9);
 }
 
+
+.containerCard{
+  display: flex;
+  overflow: scroll;
+  margin: 0px 10px 20px 0;
+  padding: 20px 10px;
+}
+
+.cardCodeBox{
+  height: 230px;
+  background-color: lightgray;
+  border: 1px solid black;
+  box-shadow: 4px 4px 4px rgba(10, 10, 10, 0.793);
+  transition: 0.35s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.cardCodeBox h2{
+  font-size: 16px;
+}
+.cardCodeBox h2, p{
+  padding: 7px;
+}
+
+.cardTop{
+  background-image: url(CSS\ EX.png);
+  width: 200px;
+  height: 20px;
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+.cardRed {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px 0 0 10px;
+}
+.cardOrange {
+  background-color: orange;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px 0 0 5px;
+}
+.cardGreen {
+  background-color: green;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px 0 0 5px;
+}
+
+.cardCodeBox img{
+  width: 100px;
+}
+
+.btn{
+  text-align: center;
+}
+
+.btn button{
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.cardCodeBox button{
+  width: 70%;
+  border: none;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.255);
+}
+
+.cardCodeBox:not(:hover){
+  transform: scale(0.9);
+}
+
+
 /* FIM DO CORPO*/
 
 /* INICIO DO RODAPÉ DO SITE*/
@@ -327,7 +407,7 @@ h1{
 }
 
 .imgFloat img{
-  width: 30%;
+  width: 140px;
   margin-left: auto;
   margin-right: auto;
   transform: translateY(0px);
