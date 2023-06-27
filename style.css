@@ -100,6 +100,7 @@ header {
     width: 100%;
     max-width: 100%;
     margin: 0;
+    padding: 40px 0 30px 0;
 }
 
 h1{
@@ -111,12 +112,24 @@ h1{
     margin: 0;
 }
 
-.conteudo h1, p{
-    text-align: justify;
+.sobre{
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    background-color: #cccccc62;
 }
 
-.sobre{
-    margin: 0 30px 30px 20px;
+.containerBanner {
+    display: flex;
+    overflow: scroll;
+    padding-bottom: 20px;
+}
+
+.containerBanner img{
+    width: 200px;
+    border: 1px solid #ccc;
+    box-shadow: 8px 8px 3px #ccc;
+    margin: 10px 0px 10px 10px;
 }
 
 .exemplos {
@@ -125,9 +138,9 @@ h1{
 }
 
 .projetos{
-    background-color: #e3e3e3;
     margin: 0;
     padding: 20px;
+    text-align: center;
 }
 .card {
     width: 270px;
@@ -142,20 +155,8 @@ h1{
     object-fit: cover;
 }
 
-.containerBanner {
-    display: flex;
-    overflow: scroll;
-}
-
-.containerBanner img{
-    width: 200px;
-    border: 1px solid #ccc;
-    box-shadow: 8px 8px 3px #ccc;
-    margin: 10px 0px 10px 10px;
-}
-
 .logossobre img{
-    width: 100;
+    width: 100px;
     object-fit: cover;
 }
 
@@ -167,20 +168,20 @@ h1{
 }
 
 .cliqueBox {
-    background-color: #ccc;
     animation: expandBox 5s infinite;
   }
 
   .boxUm {
-    background-color:  #9db068;
+    background-color: red;
     position: relative;
-    animation: boxUmExpand 10s infinite;
+    animation: boxUmExpand 15s infinite;
   }
 
   @keyframes boxUmExpand {
     0% {
-        width: 0px;
-        height: 50px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
     }
 
     50% {
@@ -191,21 +192,22 @@ h1{
     }
 
     100% {
-        width: 0px;
-        height: 50px;
-
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
     }
   }
 
   .boxDois {
-    background-color: #418097;
-    animation: boxDoisExpand 10s infinite;
+    background-color: orange;
+    animation: boxDoisExpand 15s infinite;
   }
 
   @keyframes boxDoisExpand {
     0% {
-        width: 0px;
-        height: 50px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
     }
 
     50% {
@@ -215,20 +217,22 @@ h1{
         transform: translate(-10%, 70%);
     }
     100% {
-        width: 0px;
-        height: 50px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
     }
   }
 
   .boxTres {
-    background-color: #555555;
-    animation: boxTresExpand 10s infinite;
+    background-color: green;
+    animation: boxTresExpand 15s infinite;
   }
 
   @keyframes boxTresExpand {
     0% {
-        width: 0px;
-        height: 50px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
     }
 
     50% {
@@ -239,13 +243,14 @@ h1{
     }
 
     100% {
-        width: 0px;
-        height: 50px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
     }
   }
 
   .cliqueBox P{
-    animation: P 10s infinite;
+    animation: P 15s infinite;
   }
 
   @keyframes P {
@@ -324,33 +329,59 @@ h1{
   display: flex;
   overflow: scroll;
   margin: 0px 10px 20px 0;
-  padding: 20px 10px;
+  padding: 20px 0 20px 60px;
+
 }
 
 .cardCodeBox{
   height: 230px;
-  background-color: lightgray;
+  background-color: rgb(238, 238, 238);
   border: 1px solid black;
-  box-shadow: 4px 4px 4px rgba(10, 10, 10, 0.793);
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px black;
+  box-shadow: inset -60px 0px 40px -30px rgba(10, 10, 10, 0.793);
   transition: 0.35s;
   cursor: pointer;
-  text-align: center;
+  position: relative;
+  margin-left: -40px;
+  transform: translateY(-10px);
 }
 
-.cardCodeBox h2{
+.cardCodeBox p{
+  padding: 0;
+}
+
+.cardCodeBox strong{
   font-size: 16px;
 }
-.cardCodeBox h2, p{
-  padding: 7px;
+
+.cardCodeBox p{
+  font-size: 11px;
 }
 
 .cardTop{
-  background-image: url(CSS\ EX.png);
+  background-image: 0;
+  background-color: #5f5f5f;
   width: 200px;
   height: 20px;
   display: flex;
   border-bottom: 1px solid black;
 }
+
+.cardCorpo {
+    padding: 0 10px 20px 10px;
+}
+
+.conteudoCard p{
+  font-size: 9.5px;
+  padding-left: 10px;
+}
+
+#seletorCard{
+  color: goldenrod;
+}
+
+
 
 .cardRed {
   background-color: red;
@@ -378,20 +409,6 @@ h1{
   width: 100px;
 }
 
-.btn{
-  text-align: center;
-}
-
-.btn button{
-  border-radius: 20px;
-  padding: 5px;
-}
-
-.cardCodeBox button{
-  width: 70%;
-  border: none;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.255);
-}
 
 .cardCodeBox:not(:hover){
   transform: scale(0.9);
