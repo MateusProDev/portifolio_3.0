@@ -334,7 +334,7 @@ h1{
 }
 
 .cardCodeBox{
-  height: 230px;
+  height: 260px;
   background-color: rgb(238, 238, 238);
   border: 1px solid black;
   border-radius: 10px;
@@ -347,7 +347,7 @@ h1{
 }
 
 .cardCodeBox p{
-  padding: 0;
+  padding: 10px 10px 10px 0px;
 }
 
 .cardCodeBox strong{
@@ -370,6 +370,7 @@ h1{
 
 .cardCorpo {
     padding: 0 10px 20px 10px;
+    width: 180px;
 }
 
 .code-box {
