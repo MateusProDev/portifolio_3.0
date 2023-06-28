@@ -8,13 +8,29 @@ body {
 /* inicio do modelo responsivo do menu*/
 
 header {
-    background-color: #333;
+    background: linear-gradient(75deg, #426d79fe, #174856, #426d79fe, #1b5362,#426d79fe);
+    background-size: 400%, 400%;
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.281);
+    animation: backgroundTransition 8s ease-in-out infinite;
+  }
+
+  @keyframes backgroundTransition{
+    0% {
+      background-position: 0% 80%;
+  }
+
+  50% {
+      background-position: 80% 100%;
+  }
+
+  100% {
+      background-position: 0% 90%;
+  }
   }
   
   .logo img {
@@ -113,10 +129,12 @@ h1{
 }
 
 .sobre{
-    margin: 0;
+    margin: 20px;
     padding: 15px;
     text-align: center;
     background-color: #cccccc62;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.401);
 }
 
 .containerBanner {
@@ -138,9 +156,11 @@ h1{
 }
 
 .projetos{
-    margin: 0;
-    padding: 20px;
     text-align: center;
+    background-color: #cccccc62;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.401);
 }
 .card {
     width: 270px;
@@ -276,8 +296,9 @@ h1{
 .containerHover{
     display: flex;
     overflow: scroll;
-    margin: 0px 10px 20px 0;
+    margin: 0px -20px 20px 0;
     gap: 5px;
+    background-color: #fff;
 }
 
 .item{
@@ -292,6 +313,7 @@ h1{
 .item h2{
     font-size: 16px;
 }
+
 .item h2, p{
     padding: 7px;
 }
@@ -499,12 +521,28 @@ section h2 {
 }
 
 footer {
-    background-color: #333;
+    background: linear-gradient(75deg, #426d79fe, #174856, #426d79fe, #1b5362,#426d79fe);
     margin: 0px 0;
     padding: 10px 0px 10px 0px;
     color: #ffffff;
     font-size: 10px;
     text-align: center;
+    animation: transitionFooter 8s ease-in-out infinite;
+    background-size: 400%, 400%;
+}
+
+@keyframes transitionFooter{
+  0% {
+    background-position: 0% 80%;
+}
+
+50% {
+    background-position: 80% 100%;
+}
+
+100% {
+    background-position: 0% 90%;
+}
 }
 
 footer a {
